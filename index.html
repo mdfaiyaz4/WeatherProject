@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Weather Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "@google/genai": "https://esm.run/@google/genai"
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="weather-card">
+
+        <div id="city">Searching...</div>
+
+        <div id="temp">--°C</div>
+
+        <div id="desc">
+            Allow GPS access to see weather
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Chat Toggle Button -->
+<button class="chat-toggle" id="toggleBtn">
+    💬
+</button>
+
+
+<!-- Chat Popup -->
+<div class="chat-popup" id="chatPopup">
+
+    <div class="chat-header">
+
+        <span>Weather AI Helper</span>
+
+        <button id="closeBtn">
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="chatMessages" class="chat-messages">
+
+        <div class="ai-msg">
+            I'm ready! Once I have your weather, ask me for advice!
+        </div>
+
+    </div>
+
+
+    <div class="chat-input">
+
+        <input
+            id="userInput"
+            type="text"
+            placeholder="Ask about today..."
+        >
+
+        <button id="sendBtn">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
